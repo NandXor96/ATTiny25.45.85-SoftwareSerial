@@ -2,13 +2,13 @@
 #include <avr/interrupt.h>
 #include "SoftwareSerial.h"
 
-volatile uint8_t rxBitCounter = 0; // Counter for received Bits
+volatile uint8_t rxBitCounter; // Counter for received Bits
 volatile uint8_t rxChar;           // Received Char
 volatile uint8_t rxPar = 1;        // Parity Flag
 volatile uint8_t rxFin = 1;        // Char received
 
-volatile uint16_t txReg = 0x00;    // tx Register
-volatile uint8_t txBitCounter = 0; // Counter for sent Bits
+volatile uint16_t txReg;    // tx Register
+volatile uint8_t txBitCounter; // Counter for sent Bits
 
 void txRxInit()
 {
